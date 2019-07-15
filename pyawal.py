@@ -48,7 +48,7 @@ def gen_apple_wallet(barcode):
 
     cardInfo.addBackField('name',content["name"],'Name: ')
     cardInfo.addBackField('description',content["description"],'Description: ')
-    cardInfo.addBackField('credit','https://wallet.shane.app','Created By: ')
+    #cardInfo.addBackField('credit','https://wallet.shane.app','Created By: ')
 
     organizationName = content["name"]
     passTypeIdentifier = os.environ.get('PASS_TYPE_IDENT')
@@ -86,8 +86,9 @@ def gen_apple_wallet(barcode):
 
 def main():
     mimetypes.add_type('application/vnd.apple.pkpass', '.pkpass')
-    app.run(host='0.0.0.0', port=5002, debug=False)
+    app.run(host='::', port=5002, debug=False)
 
 # If we're running in stand alone mode, run the application
 if __name__ == '__main__':
     main()
+

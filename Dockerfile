@@ -12,6 +12,6 @@ RUN pip install -r /app/requirements.txt
 RUN mkdir /app/crts
 VOLUME /app/crts
 
-EXPOSE 5001
+EXPOSE 5002
 
 CMD [ "python", "/app/pyawal.py" ]
