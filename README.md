@@ -22,6 +22,7 @@ wwdr.pem
 You can delete the ```Certificates.p12``` file.
 
 ## Docker Compose Example:
+
 ```
 version: '3'
 services:
