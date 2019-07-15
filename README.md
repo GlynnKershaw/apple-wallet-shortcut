@@ -35,10 +35,10 @@ services:
     port:
       - "5002:5002"
     environment:
-      - PASS_TYPE_IDENT=<pass.tld.yourdomain>
+      - PASS_TYPE_IDENT=pass.tld.yourdomain
       - TEAM_IDENT=<team ID>
       - PASS_PASSWORD=<private key passphrase>
-      - RETURN_ADDRESS=http://<yourdomain.tld>:5002
+      - RETURN_ADDRESS=http://yourdomain.tld:5002
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - <certfiles directory>:/app/crts
