@@ -26,7 +26,7 @@ You can delete the ```Certificates.p12``` file.
 version: '3'
 services:
   applewallet:
-    image: shauder/apple-wallet-shortcut:latest
+    image: glynn/apple-wallet-shortcut:stable
     container_name: applewallet
     restart: unless-stopped
     networks:
@@ -34,10 +34,10 @@ services:
     port:
       - "5002:5002"
     environment:
-      - PASS_TYPE_IDENT=<pass.tld.yourdomain>
+      - PASS_TYPE_IDENT=pass.tld.yourdomain.foo
       - TEAM_IDENT=<team ID>
       - PASS_PASSWORD=<private key passphrase>
-      - RETURN_ADDRESS=http://<yourdomain.tld>:5002
+      - RETURN_ADDRESS=http://yourdomain.tld:5002
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - <certfiles directory>:/app/crts
